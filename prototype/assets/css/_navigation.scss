@@ -1,0 +1,35 @@
+.has-drop-panel {
+
+	&:hover {
+		
+		& > a {
+			background: #000 !important;
+		}
+	}
+	.dropdown {
+		background-color: #000;
+		padding-bottom: 30px;
+	}
+
+	h5 {
+		color: $topbar-link-color;
+	}
+
+	.drop-panel {
+		padding: 10px;
+		width: 650px;
+
+		.nav-column {
+			width: 120px;
+			float: left;
+
+			a {
+				display: block;
+				padding: 0;
+				background: none;
+				margin-bottom: 7px;
+				font-size: 0.8em;
+			}
+		}
+	}
+}
