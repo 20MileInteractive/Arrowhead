@@ -1,0 +1,455 @@
+<body>
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foundation 4</title>
+
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='Build/assets/css/normalize.css'>
+  <link rel='stylesheet' href='assets/css/styles.css'>
+<link rel='stylesheet' href='Build/assets/css/styles.css'>
+
+  <script src='assets/js/vendor/custom.modernizr.js'></script>
+<script src='Build/assets/js/vendor/custom.modernizr.js'></script>
+
+</head>
+<body>
+
+<!-- BEGIN Mobile Nav -->
+<section id="mobile-nav" class="row show-for-small collapse">
+	<nav>
+		<ul class="button-group even-2">
+			<li>
+				<a href="#" class="small button secondary">
+					Menu
+				</a>
+			</li>
+			<li>
+				<a href="#" class="small button secondary">
+					Cart
+					<span class="round label">3</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</section>
+<!-- END Mobile Nav -->
+
+<!-- BEGIN top header -->
+<section class="row">
+	<div class="large-3 columns">
+		<h1><img src="http://placehold.it/400x100&text=Logo" /></h1>
+	</div>
+	<div class="large-7 columns text-center">
+		<h5>Customer Service 508-888-8888</h5>
+	</div>
+	<div class="large-2 columns hide-for-small">
+		cart
+	</div>
+</section>
+<!-- END top header -->
+
+
+<!-- BEGIN top nav -->
+<section id="full-nav" class="row">
+	<div class="large-12 columns">
+		<div class="contain-to-grid">
+			<nav class="top-bar hide-for-small">
+				<section class="top-bar-section">
+					<ul class="title-area">
+						<!-- Title Area -->
+						<li class="name"></li>
+						<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+					</ul>
+					<!-- Left Nav Section -->
+					<ul class="left">
+						<!-- Shop -->
+						<li class="has-dropdown has-drop-panel">
+							<a href="#">Shop</a>
+							<ul class="dropdown">
+								<li>
+									<div class="drop-panel">
+										<div class="nav-column">
+											<h5>By Brand</h5>
+											<a href="#">Brand 1</a>
+											<a href="#">Brand 2</a>
+											<a href="#">Brand 3</a>
+											<a href="#">Brand 4</a>
+											<a href="#">Brand 5</a>
+											<a href="#">Brand 6</a>
+										</div>
+
+										<div class="nav-column">
+											<h5>By Category</h5>
+											<a href="#">Category 1</a>
+											<a href="#">Category 2</a>
+											<a href="#">Category 3</a>
+											<a href="#">Category 4</a>
+											<a href="#">Category 5</a>
+											<a href="#">Category 6</a>
+											<a href="#">Category 7</a>
+											<a href="#">Category 8</a>
+										</div>
+
+										<div class="nav-column">
+											<h5>By Material</h5>
+											<a href="#">Material 1</a>
+											<a href="#">Material 2</a>
+											<a href="#">Material 3</a>
+											<a href="#">Material 4</a>
+											<a href="#">Material 5</a>
+										</div>
+
+										<div class="nav-column">
+											<h5>Sale Items</h5>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+
+						<li class="divider"></li>
+						<!-- Learn -->
+						<li class="has-dropdown">
+							<a href="#">Learn</a>
+							<ul class="dropdown">
+								<li class="has-dropdown"><a href="#">Dropdown Level 1a</a>
+
+									<ul class="dropdown">
+										<li><label>Dropdown Level 2 Label</label></li>
+										<li><a href="#">Dropdown Level 2a</a></li>
+										<li><a href="#">Dropdown Level 2b</a></li>
+										<li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+											<ul class="dropdown">
+												<li><label>Dropdown Level 3 Label</label></li>
+												<li><a href="#">Dropdown Level 3a</a></li>
+												<li><a href="#">Dropdown Level 3b</a></li>
+												<li class="divider"></li>
+												<li><a href="#">Dropdown Level 3c</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Dropdown Level 2d</a></li>
+										<li><a href="#">Dropdown Level 2e</a></li>
+										<li><a href="#">Dropdown Level 2f</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Dropdown Level 1b</a></li>
+								<li><a href="#">Dropdown Level 1c</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Dropdown Level 1d</a></li>
+								<li><a href="#">Dropdown Level 1e</a></li>
+								<li><a href="#">Dropdown Level 1f</a></li>
+								<li class="divider"></li>
+								<li><a href="#">See all &rarr;</a></li>
+							</ul>
+						</li>
+
+						<li class="divider"></li>
+						<!-- Nantucket Showroom -->
+						<li class="">
+							<a href="#">Nantucket Showroon</a>
+						</li>
+
+						<li class="divider"></li>
+						<!-- Customer Service -->
+						<li class="has-dropdown">
+							<a href="#">Customer Service</a>
+							<ul class="dropdown">
+								<li class="has-dropdown"><a href="#">Dropdown Level 1a</a>
+
+									<ul class="dropdown">
+										<li><label>Dropdown Level 2 Label</label></li>
+										<li><a href="#">Dropdown Level 2a</a></li>
+										<li><a href="#">Dropdown Level 2b</a></li>
+										<li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+											<ul class="dropdown">
+												<li><label>Dropdown Level 3 Label</label></li>
+												<li><a href="#">Dropdown Level 3a</a></li>
+												<li><a href="#">Dropdown Level 3b</a></li>
+												<li class="divider"></li>
+												<li><a href="#">Dropdown Level 3c</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Dropdown Level 2d</a></li>
+										<li><a href="#">Dropdown Level 2e</a></li>
+										<li><a href="#">Dropdown Level 2f</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Dropdown Level 1b</a></li>
+								<li><a href="#">Dropdown Level 1c</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Dropdown Level 1d</a></li>
+								<li><a href="#">Dropdown Level 1e</a></li>
+								<li><a href="#">Dropdown Level 1f</a></li>
+								<li class="divider"></li>
+								<li><a href="#">See all &rarr;</a></li>
+							</ul>
+						</li>
+
+						<li class="divider"></li>
+						<!-- Contact Us -->
+						<li class="">
+							<a href="#">Contact Us</a>
+						</li>
+					</ul>
+
+					<!-- Right Nav Section -->
+					<ul class="right">
+						<li class="divider"></li>
+						<li class="has-form">
+							<form>
+								<div class="row collapse">
+									<div class="small-8 columns">
+										<input type="text">
+									</div>
+									<div class="small-4 columns">
+										<a href="#" class="alert button">Search</a>
+									</div>
+								</div>
+							</form>
+						</li>
+						<li class="divider"></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</div>
+</section>
+<!-- END top nav -->
+
+<!-- BEGIN hero slider -->
+<section class="row">
+	<div class="large-12 columns">
+		<div id="slider">
+			<img src="http://placehold.it/1000x400&text=[ Featured Photo ]" />
+		</div>
+	</div>
+</section>
+<!-- END hero slider -->
+
+<!-- BEGIN call for action -->
+<section class="row">
+	<div class="large-12 columns text-center">
+		<h1>Arrowhead Furniture</h1>
+		<h2>The finest outdoor furniture for your home.</h2>
+		<h3><a href="#">Read Our Story</a></h3>
+	</div>
+</section>
+<!-- END call for action -->
+
+<!-- BEGIN Featured Items -->
+<section class="row">
+	<header class="text-center">
+		<h1>Featured Items</h1>
+	</header>
+	<div class="large-12 columns">
+		<div class="row">
+			<div class="large-3 columns">
+				<h5>This is a content section.</h5>
+				<img src="http://placehold.it/400x300&text=[img]" />
+			</div>
+			<div class="large-3 columns">
+				<h5>This is a content section.</h5>
+				<img src="http://placehold.it/400x300&text=[img]" />
+			</div>
+			<div class="large-3 columns">
+				<h5>This is a content section.</h5>
+				<img src="http://placehold.it/400x300&text=[img]" />
+			</div>
+			<div class="large-3 columns">
+				<h5>This is a content section.</h5>
+				<img src="http://placehold.it/400x300&text=[img]" />
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END Featured Items -->
+
+<!-- BEGIN From our Blog -->
+<section class="row">
+	<div class="large-12 columns">
+		<div class="panel">
+			<div class="row">
+				<article class="large-8 columns">
+					<header>
+						<h1>From Our Blog</h1>
+					</header>
+					<h3>Cathy blog title goes here</h3>
+					<p>
+						Lorem ipsum tempor culpa reprehenderit nisi officia id minim pariatur culpa mollit pariatur enim in dolore aliquip amet veniam nulla sit incididunt commodo adipisicing cupidatat sed minim commodo elit in culpa fugiat quis reprehenderit. 
+					</p>
+					<footer>
+						<a href="#">Read More</a>
+					</footer>
+				</article>
+				<aside class="large-4 columns">
+					<div class="rounded-panel">
+						<div class="row">
+							<div class="large-12 columns text-center">
+								<h3>Connect With Us</h3>
+								<p>Stay in touch to get the latest news and other benefits will go here.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="large-12 columns">
+								<form action="" class="row collapse">
+									<div class="small-8 columns">
+										<input type="text">
+									</div>
+									<div class="small-4 columns">
+										<a href="#" class="button prefix">Action</a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="large-6 columns">
+								<a href="#" class="button large-12">Facebook</a>
+							</div>
+							<div class="large-6 columns">
+								<a href="#" class="button large-12">Twitter</a>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END From our Blog -->
+
+<!-- Footer -->
+
+<footer>
+	<div class="row">
+		<section class="large-2 columns">
+			<header>
+				<h5>Shop</h5>
+			</header>
+			<ul>
+				<li><a href="#"><span>By Brand</span></a></li>
+				<li><a href="#"><span>By Category</span></a></li>
+				<li><a href="#"><span>By Material</span></a></li>
+				<li><a href="#"><span>Sale Items</span></a></li>
+			</ul>
+		</section>
+		<section class="large-2 columns">
+			<header>
+				<h5>Learn</h5>
+			</header>
+			<ul>
+				<li><a href="#"><span>Furniture Care</span></a></li>
+				<li><a href="#"><span>Our Story</span></a></li>
+				<li><a href="#"><span>Our Brands</span></a></li>
+				<li><a href="#"><span>Our Blog</span></a></li>
+			</ul>
+		</section>
+		<section class="large-4 columns">
+			<header>
+				<h5>Customer Service</h5>
+			</header>
+			<ul>
+				<li><a href="#"><span>How To Order</span></a></li>
+				<li><a href="#"><span>Shipping &amp; Returns</span></a></li>
+				<li><a href="#"><span>FAQs</span></a></li>
+				<li><a href="#"><span>Order Tracking</span></a></li>
+				<li><a href="#"><span>Contact Us</span></a></li>
+			</ul>
+		</section>
+		<div class="large-4 columns">
+			<div class="row">
+				<div class="large-12 columns">
+					<a href="#"><h5>Nantucket Showroom</h5></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<a href="#"><h5>Contact Us</h5></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-12 columns text-center">
+			<a href="#">Account Center</a> &bull;
+			<a href="#">Privacy Police</a> &bull;
+			<a href="#">Request Catalog</a> &bull;
+			<a href="#">Contact Us</a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-12 columns text-center">
+			<a href="#">email@address.com</a> &bull;
+			<a href="#">800-888-8888</a>
+		</div>
+	</div>
+
+</footer>
+
+    <script src='assets/js/vendor/jquery.js'></script>
+<script src='Build/assets/js/vendor/jquery.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.alerts.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.alerts.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.clearing.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.clearing.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.cookie.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.cookie.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.dropdown.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.dropdown.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.forms.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.forms.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.joyride.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.joyride.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.magellan.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.magellan.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.orbit.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.orbit.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.placeholder.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.placeholder.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.reveal.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.reveal.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.section.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.section.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.tooltips.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.tooltips.js'></script>
+    <script src='assets/js/vendor/foundation/foundation.topbar.js'></script>
+<script src='Build/assets/js/vendor/foundation/foundation.topbar.js'></script>
+	<script src='assets/js/script.js'></script>
+<script src='Build/assets/js/script.js'></script>
+</body>
+</html>
